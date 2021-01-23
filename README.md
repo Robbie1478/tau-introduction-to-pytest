@@ -13,7 +13,11 @@
 #### Running a Test
 
 ```bash
-Naming conventions are important to pytest. Notice that both our test module and our test function contain the prefix "test_". When pytest runs, it will discover tests from its current directory down. By default, any function names with the prefix "test_" in any modules with the prefix "test_" will be identified and executed as test cases. You can override these settings using pytest config files but I recommend sticking with convention. Note that you may also put non-test functions inside test modules.
+Notice that both our test module and our test function contain the prefix "test_". 
+
+When pytest runs, it will discover tests from its current directory down. 
+By default, any function names with the prefix "test_" in any modules with the prefix "test_" 
+will be identified and executed as test cases.
 ```
 
 `You can from the command line using python -m pytest.`
