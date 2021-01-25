@@ -40,7 +40,7 @@ def test_one_plus_two():
 
 Exception from 1 test won't affect other tests.
 
-To handle dision by zero, we can import pytest and handle it with `assert 'divison by zero' in str(e.value)`
+To handle dision by zero, we can `import pytest` and handle it with `assert 'divison by zero' in str(e.value)`
 
 ```bash
 def test_divide_by_zero():
