@@ -20,4 +20,18 @@ By default, any function names with the prefix "test_" in any modules with the p
 will be identified and executed as test cases.
 ```
 
-`You can from the command line using python -m pytest.`
+You can run test from the command line using `python -m pytest.`
+
+### Chapter 2 - A Failin Test Case
+
+#### A Failing Test
+
+The following will fail with an assertion error.
+
+```bash
+def test_one_plus_two():
+    a = 1
+    b = 2
+    c = 0
+    assert a + b == c
+```
