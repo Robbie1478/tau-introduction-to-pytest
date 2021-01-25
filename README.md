@@ -13,10 +13,10 @@
 #### Running a Test
 
 ```bash
-Notice that both our test module and our test function contain the prefix "test_". 
+Notice that both our module and our function contain the prefix test_. 
 
 When pytest runs, it will discover tests from its current directory down. 
-By default, any function names with the prefix "test_" in any modules with the prefix "test_" 
+By default, any function names with the prefix test_ in any modules with the prefix test_
 will be identified and executed as test cases.
 ```
 
