@@ -35,3 +35,17 @@ def test_one_plus_two():
     c = 0
     assert a + b == c
 ```
+
+### Chapter 3 A Test With An Exception
+
+Exception from 1 test won't affect other tests.
+
+To handle dision by zero, we can import pytest and handle it with `assert 'divison by zero' in str(e.value)`
+
+```bash
+def test_divide_by_zero():
+    with pytest.raises(ZeroDivisionError) as e:
+        num = 1 / 0
+
+    assert 'division by zero' in str(e.value)
+```
