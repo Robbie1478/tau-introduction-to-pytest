@@ -36,7 +36,7 @@ def test_one_plus_two():
     assert a + b == c
 ```
 
-### Chapter 3 A Test With An Exception
+### Chapter 3 - A Test With An Exception
 
 Exception from 1 test won't affect other tests.
 
@@ -49,3 +49,24 @@ def test_divide_by_zero():
 
     assert 'division by zero' in str(e.value)
 ```
+
+### Chapter 4 Paramtrized Test Cases
+
+Using tuples in products can help reduce code, especially repeated code when used with the parametrize function
+
+```bash
+products = [
+    (2, 3, 6),                  # two positive integers
+    (1, 99, 99),                # identity: multiplying any number by 1
+    (0, 99, 0),                 # zero: multiply any number by 1
+    (3, -4, -12),               # positive by a negative
+    (-5, -5, 25),               # negative by a negative
+    (2.5, 6.7, 16.75)           # mutliply floats
+]
+
+@pytest.mark.parametrize('a, b, product', products)
+def test_multiplication(a, b, product):
+  assert a * b == product
+```
+
+To furter extend this, you could check out `Hypothesis`, which is a testing library which can integrate wiht `pytest`.
