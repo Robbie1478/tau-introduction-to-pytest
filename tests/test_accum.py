@@ -1,5 +1,4 @@
 import pytest
-from stuff.accum import Accumulator
 
 def test_accumulator_init(accum):
     assert accum.count == 0

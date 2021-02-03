@@ -92,3 +92,19 @@ from stuff.accum import Accumulator
 def accum():
     return Accumulator()
 ```
+
+### Chapter 7 - Commands and Configs
+
+#### Command Console Output
+
+- `python -m pytest --help`
+- `python -m pytest` - runs all tests
+- `python -m pytest --verbose or -v` - pytest prints more data, enables you to see more data at a glance
+- `python -m pytest --quite` - Gives dots of F if a test fails
+- `python -m pytest --exitfirst or -exit`- Stops after the 1st failure
+- `python -m pytest --maxfail` - Gives flexibility on how many tests can fail prior to execution exiting
+- `python -m pytest --junit-xml report.xml` - will generate a file called report.xml
+
+#### Configuration Options
+
+[Configuration Files](https://docs.pytest.org/en/latest/customize.html) - should be loaded in the project root directory.
