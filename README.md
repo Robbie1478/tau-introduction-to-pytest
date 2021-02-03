@@ -50,7 +50,7 @@ def test_divide_by_zero():
     assert 'division by zero' in str(e.value)
 ```
 
-### Chapter 4 Paramtrized Test Cases
+### Chapter 4 - Paramtrized Test Cases
 
 Using tuples in products can help reduce code, especially repeated code when used with the parametrize function
 
@@ -70,3 +70,25 @@ def test_multiplication(a, b, product):
 ```
 
 To furter extend this, you could check out `Hypothesis`, which is a testing library which can integrate wiht `pytest`.
+
+### Chapter 6 - Fixtures
+
+- [Python Generators](https://realpython.com/introduction-to-python-generators/)
+
+[Python Fixtures](https://docs.pytest.org/en/stable/fixture.html) are special functions the pytest can call before test case functions.  
+Using Python Fixtures means you can make use of the [DRY - Don't Repeat Yourself Principle](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) thus reducing repeated code and allows for passing in the return value into the test case funtion.  
+This is also known as [Dependency Injection](https://en.wikipedia.org/wiki/Dependency_injection) in Python.
+
+#### Sharing Fixtures Across Test Modules
+
+To share fixture across test modules - create a file called `conftest.py` with the `tests` folder, ensuring you remember the imports.
+A test case can use multiple fixtures, just ensure each fixture has a unique name.
+
+```bash
+import pytest
+from stuff.accum import Accumulator
+
+@pytest.fixture
+def accum():
+    return Accumulator()
+```
