@@ -100,7 +100,7 @@ def accum():
 - `python -m pytest --help`
 - `python -m pytest` - runs all tests
 - `python -m pytest --verbose or -v` - pytest prints more data, enables you to see more data at a glance
-- `python -m pytest --quite` - Gives dots of F if a test fails
+- `python -m pytest --quite` - Gives dots of F if a test fails e.g ....F...
 - `python -m pytest --exitfirst or -exit`- Stops after the 1st failure
 - `python -m pytest --maxfail` - Gives flexibility on how many tests can fail prior to execution exiting
 - `python -m pytest --junit-xml report.xml` - will generate a file called report.xml
