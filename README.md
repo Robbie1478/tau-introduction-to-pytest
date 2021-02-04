@@ -160,3 +160,34 @@ markers =
   duckduckgo
   rest_api
 ```
+
+### Chapter 10 - Extending Pytest With Plugins
+
+#### Reporting Pytest-Html
+
+In an effort to keep track of results, a good idea is to make use of report files.
+
+- [pytest-html](https://github.com/pytest-dev/pytest-html)
+- `pip install pytest-html`
+- `python -m pytest --html=report.html`
+
+#### Coverage
+
+- `pip install pytest-cov`
+- `python -m pytest --cov=stuff` - this would give you the coverage based on the folder `stuff`
+- `python -m pytest --cov=stuff --cov-report html` - This will generate an html report for coverage within its own htmlcov folder
+
+The coverage report used here, allows you to click on  files to see where you may have missing coverage.
+
+#### Pytest Xdist
+
+- `pip install pytest-xdist`
+- `python -m pytest -n 3` - although for the unit tests it take a bit longer to execute, it would be more beneficial when a greater number of tests are involved
+
+All tests need to be totally independent or you run the risk of collisons
+
+- [A guide to paralell testing](https://automationpanda.com/2018/01/21/to-infinity-and-beyond-a-guide-to-parallel-testing/)
+
+#### Pytest BDD
+
+- [Pytest BDD](https://pypi.org/project/pytest-bdd/)
