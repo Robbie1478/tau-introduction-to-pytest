@@ -181,6 +181,8 @@ The coverage report used here, allows you to click on  files to see where you ma
 
 #### Pytest Xdist
 
+[Pytest Xdist](https://pypi.org/project/pytest-xdist/)
+
 - `pip install pytest-xdist`
 - `python -m pytest -n 3` - although for the unit tests it take a bit longer to execute, it would be more beneficial when a greater number of tests are involved
 
