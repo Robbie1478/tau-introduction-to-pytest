@@ -139,3 +139,24 @@ testpaths = tests
 Running with selected markers is pretty easy use the following command passing in the marker using -m
 
 - `python -m pytest -m math`
+
+### Chapter 9 Feature Tests
+
+For this chapter we will need to install the requests package, this can be done by running the command
+`pip install requests`
+
+Remember to import the requests package `import requests`.  
+
+#### Running The Test
+
+Run the test with this command `python -m pytest -m rest_api`. 
+
+To avoid warnings when running the test, add the markers to the configuration file `pytest.ini`
+
+```bash
+markers =
+  accumulator
+  math
+  duckduckgo
+  rest_api
+```
