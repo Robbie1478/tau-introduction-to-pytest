@@ -108,3 +108,34 @@ def accum():
 #### Configuration Options
 
 [Configuration Files](https://docs.pytest.org/en/latest/customize.html) - should be loaded in the project root directory.
+
+### Chapter 8 - Filtering Tests
+
+You can run tests based on a folder or filter to specific tests
+
+- `python -m pytest tests` - folder level
+- `python -m pytest tests/test_accum.py` - folder level and specific test file
+- `python -m pytest tests/test_math.py` - specific test files in a folder
+- `python -m pytest tests/test_math.py::test_one_plus_one` - specific test case within a file
+- `python -m pytest -k one` - will run all tests that contain a certain the substring 'one'
+- `python -m pytest -k "one and not accum"` - you and use basic logic to run certain tests, but be careful of false positives
+
+#### Markers and Decorators
+
+To add a marker to test cases, you should use a marker - This can be achieved by:
+
+- `@pytest.mark.math`
+- `@pytest.mark.accumulator`
+
+You should also add the custom marker to the pytest configuration file, otherwise you may get warning messages.
+
+```bash
+markers =
+  accumulator
+  math
+testpaths = tests
+```
+
+Running with selected markers is pretty easy use the following command passing in the marker using -m
+
+- `python -m pytest -m math`
